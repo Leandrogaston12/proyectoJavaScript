@@ -45,7 +45,55 @@
 // calcularDescuento(cantidadProductos);
 
 
+function saludar() {
+    alert("Bienvenidos a tienda pet shop")
+}
+
+saludar();
 
 
+
+
+
+
+const listaProductos = [
+    {   productoId: 1,
+        nombre : 'remera',	
+        precio : 1200,
+        stock : 5
+    },
+
+    {
+        productoId: 2,
+        nombre : 'camiseta',	
+        precio : 1500,
+        stock : 5
+    },
+    
+    {   
+        productoId: 3,
+        nombre : 'buzo',	
+        precio : 2000,
+        stock : 5
+    }
+]
+
+
+const seleccion = Number(prompt("Ingrese que producto necesitas comprar 1-remera  2-camiseta  3-buzo"));
+
+
+// const busquedaRopa = listaProductos.filter((el) => el.nombre.includes("remera")) 
+
+function busquedaRopa(listaProductos,seleccionDelUsuario){
+
+    listaProductos.forEach((producto) => {
+        if(seleccionDelUsuario == producto.productoId) {
+            console.log("Usted selecciono "+producto.nombre + " y su precio es: $" + producto.precio );
+        }
+    })
+
+    
+}
+busquedaRopa(listaProductos,seleccion)
 
 

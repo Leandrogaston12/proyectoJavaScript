@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 
 .bg-blue{
     background-color: #341ef9;
@@ -12,5 +12,9 @@
 
 #botonera img{
     height: 50px;
+}
+
+body{
+    background-image: url(./imagenes/fondo-kawaii-perro-gato_6997-1578.webp);
 }
 

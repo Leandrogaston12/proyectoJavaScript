@@ -1,14 +1,44 @@
 
+.color-black{
+    color: black;
+}
+
+.color-yellow{
+    color: #ffff51;
+}
+
+.color-green{
+    color: green;
+}
+
+.bg-rose{
+    background-color: #d123d1;
+}
+
 
 .bg-blue{
     background-color: #341ef9;
 }
 
+.bg-blue-light{
+    background-color: aqua;
+}
+
+.bg-brown{
+    background-color: #814141;
+}
+
+.bg-red{
+    background-color: #ff2424;
+}
 
 .bg-yellow{
     background-color: #ffff51;
 }
 
+.bg-orange{
+    background-color: #ffa74f;
+}
 
 #botonera img{
     height: 50px;
@@ -18,3 +48,30 @@ body{
     background-image: url(./imagenes/fondo-kawaii-perro-gato_6997-1578.webp);
 }
 
+.img-widht{
+width: 18rem;
+}
+
+
+.text-center{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+
+}
+
+/* #sectionMain{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.card{
+    width: 18rem;
+}
+
+#shopContent{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    height: 300px;
+    justify-content: center;
+}

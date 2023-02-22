@@ -1,101 +1,42 @@
-
-const productosShop = [
-  {
-    id: 1,
-    picture: "./imagenes/agarrePerro.webp",
-    nombre: "agarre perro",
-    text: "Agarre para perro, estatura chica o mediana.",
-    precio: 1200,
-  },
-  
-  {
-    id: 2,
-    picture: "./imagenes/buzoPerro.webp",
-    nombre: "buzo perro",
-    text: "Buzo para perro, estatura chica o grande",
-    precio: 1500,
-  },
-  
-  {
-    id: 3,
-    picture: "./imagenes/chalecoGato.webp",
-    nombre: "chaleco gato",
-    text: "Este es un chaleco para gato, solo para estatura chica o mediana",
-    precio: 1000,
-  },
-  
-  {
-    id: 4,
-    picture: "./imagenes/chalecoPerro.webp",
-    nombre: "chaleco perro",
-    text: "chaleco para perro exclusivo, solo para estatura chica o mediana",
-    precio: 1000,
-  },
-  
-  {
-    id: 5,
-    picture: "./imagenes/remeraArgentinaPerro.webp",
-    nombre: "remera argentina",
-    text: "Remera Argentina exclusiva, solo para estatura grande",
-    precio: 1600,
-  },
-  
-  {
-    id: 6,
-    picture: "./imagenes/bandanaPerro.jpg",
-    nombre: "bandana perro",
-    text: "Bandana para perro exclusiva, para todas las estaturas",
-    precio: 800,
-  },
-  
-  {
-    id: 7,
-    picture: "./imagenes/camperaDisney.webp",
-    nombre: "campera disney",
-    text: "campera disney, solo para talles chicos",
-    precio: 1200,
-  },
-  
-  {
-    id: 8,
-    picture: "./imagenes/vestidoCalabazaPerro.webp",
-    nombre: "vestido calabaza perro",
-    text: "vestido calabaza para perros, solo para estatura grande",
-    precio: 1700,
-  },
-];
-
+fetch("./productos.json")
+.then((res) => res.json())
+.then((data) => {
+  cargaProductos(data)
+});
 let shopContent = document.getElementById("shopContent");
 
-productosShop.forEach((producto) => {
-  let content = document.createElement("div");
-  content.className = "card";
-  content.innerHTML = `
-  <img src="${producto.picture}" class="card-img-top img-widht">
-  <div class="card-body bg-orange">
-  <h5 class="card-title">${producto.nombre}</h5>
-  <p class="card-text"> ${producto.text}</p>
-  <h4>$${producto.precio}</h4>
-  `;
-  shopContent.append(content);
-  
-  let comprar = document.createElement("button");
-  comprar.className = "btn bg-rose";
-  comprar.innerText = "agregar al carrito";
-  
-  content.append(comprar);
-  
-  comprar.addEventListener("click", () => {
-    Toastify({
-      text: "Se agrego al carrito",
-      className: "color-black",
-      style: {
-        background: "linear-gradient(to right, green,#ffff51 )",
-      }
-    }).showToast();
-    agregarAlCarrito(producto);
+
+async function cargaProductos(productosShop) {         
+  productosShop.forEach((producto) => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+    <img src="${producto.picture}" class="card-img-top img-widht">
+    <div class="card-body bg-orange">
+    <h5 class="card-title">${producto.nombre}</h5>
+    <p class="card-text"> ${producto.text}</p>
+    <h4>$${producto.precio}</h4>
+    `;
+    shopContent.append(content);
+    
+    let comprar = document.createElement("button");
+    comprar.className = "btn bg-rose";
+    comprar.innerText = "agregar al carrito";
+    
+    content.append(comprar);
+    
+    comprar.addEventListener("click", () => {
+      Toastify({
+        text: "Se agrego al carrito",
+        className: "color-black",
+        style: {
+          background: "linear-gradient(to right, green,#ffff51 )",
+        }
+      }).showToast();
+      agregarAlCarrito(producto);
+    });
   });
-});
+}
 
 function seleccionProductos(productosArray, prod) {
   let resultado = "";
@@ -134,8 +75,14 @@ function agregarAlCarrito(producto) {
   if(carrito==null){
     carrito= "[]"
   }
+  producto.cantidad = 1;
   carrito = JSON.parse(carrito)
-  carrito.push(producto)
+  let existePorducto = carrito.filter(p => p.id == producto.id);
+  if (existePorducto.length != 0) {
+    existePorducto[0].cantidad++;
+  } else {
+    carrito.push(producto);
+  }
   localStorage.setItem("carrito", JSON.stringify(carrito))
   console.log(carrito)
 }

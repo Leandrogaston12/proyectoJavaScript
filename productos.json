@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "picture": "./imagenes/agarrePerro.webp",
+        "nombre": "agarre perro",
+        "text": "Agarre para perro, estatura chica o mediana.",
+        "precio": 1200
+      },
+      
+      {
+        "id": 2,
+        "picture": "./imagenes/buzoPerro.webp",
+        "nombre": "buzo perro",
+        "text": "Buzo para perro, estatura chica o grande",
+        "precio": 1500
+      },
+      
+      {
+        "id": 3,
+        "picture": "./imagenes/chalecoGato.webp",
+        "nombre": "chaleco gato",
+        "text": "Este es un chaleco para gato, solo para estatura chica o mediana",
+        "precio": 1000
+      },
+      
+      {
+        "id": 4,
+        "picture": "./imagenes/chalecoPerro.webp",
+        "nombre": "chaleco perro",
+        "text": "chaleco para perro exclusivo, solo para estatura chica o mediana",
+        "precio": 1000
+      },
+      
+      {
+        "id": 5,
+        "picture": "./imagenes/remeraArgentinaPerro.webp",
+        "nombre": "remera argentina",
+        "text": "Remera Argentina exclusiva, solo para estatura grande",
+        "precio": 1600
+      },
+      
+      {
+        "id": 6,
+        "picture": "./imagenes/bandanaPerro.jpg",
+        "nombre": "bandana perro",
+        "text": "Bandana para perro exclusiva, para todas las estaturas",
+        "precio": 800
+      },
+      
+      {
+        "id": 7,
+        "picture": "./imagenes/camperaDisney.webp",
+        "nombre": "campera disney",
+        "text": "campera disney, solo para talles chicos",
+        "precio": 1200
+      },
+      
+      {
+        "id": 8,
+        "picture": "./imagenes/vestidoCalabazaPerro.webp",
+        "nombre": "vestido calabaza perro",
+        "text": "vestido calabaza para perros, solo para estatura grande",
+        "precio": 1700
+      }
+]

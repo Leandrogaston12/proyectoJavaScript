@@ -141,6 +141,19 @@ width: 18rem;
 
 
   /* --------Boton Sacar del carrito */
+
+  .cardCarrito span {
+    width: 40px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+    position: absolute;
+  }
+
   
   .cardCarrito button {
     width: 40px;
@@ -156,28 +169,37 @@ width: 18rem;
   }
 
   .cardCarrito button#botonRestar {
-    right: 340px;
+    width: 30px;
+    padding: 1px;
+    margin: 30px;
+    right: 184px;
   }
   .cardCarrito button#botonRestar:hover {
     background-color: black;
   }
 
-  .cardCarrito button#botonMostrar {
-    right: 298px;
+  .cardCarrito span#botonMostrar {
+    width: 30px;
+    padding: 1px;
+    margin: 30px;
+    right: 142px;
   }
 
   .cardCarrito button#botonSumar {
-    right: 256px;
+    width: 30px;
+    padding: 1px;
+    margin: 30px;
+    right: 100px;
   }
 
   .cardCarrito button#botonSumar:hover {
     background-color: green;
   }
   
-  .cardCarrito button#botonEliminar{
+  .cardCarrito button.botonEliminar{
     right: 10px;
   }
-  .cardCarrito button#botonEliminar:hover {
+  .cardCarrito button.botonEliminar:hover {
     background-color: red;
   }
 

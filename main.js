@@ -19,15 +19,16 @@ async function cargaProductos(productosShop) {
     `;
     shopContent.append(content);
     
-    let comprar = document.createElement("button");
-    comprar.className = "btn bg-rose";
-    comprar.innerText = "agregar al carrito";
+    let agregarProducto = document.createElement("button");
+    agregarProducto.className = "btn bg-rose";
+    agregarProducto.innerText = "agregar al carrito";
     
-    content.append(comprar);
+    content.append(agregarProducto);
     
-    comprar.addEventListener("click", () => {
+    agregarProducto.addEventListener("click", () => {
       Toastify({
         text: "Se agrego al carrito",
+        duration: 1000,
         className: "color-black",
         style: {
           background: "linear-gradient(to right, green,#ffff51 )",
@@ -86,42 +87,5 @@ function agregarAlCarrito(producto) {
   localStorage.setItem("carrito", JSON.stringify(carrito))
   console.log(carrito)
 }
-// function saludar() {
-//   alert("Bienvenidos a tienda pet shop");
-// }
 
-// saludar();
-
-// let productos = Number(
-//   prompt(
-//     "Ingrese que producto necesitas comprar \n1-agarre perro \n2-buzo perro \n3-chaleco gato \n4-chaleco perro \n5-remera Argentina \n6-bandana perro \n7-campera disney \n8-vestido calabaza perro"
-//   )
-// );
-
-
-// alert(
-  //   "usted debe abonar $" +
-  //     calcularTotal(productos, cantidadProductos, productosShop)
-  // );
-  
-  // alert(
-    //   "usted va a recibir el " +
-    //     calcularDescuento(cantidadProductos) +
-    //     "% de descuento"
-    // );
-    
-    // console.log(seleccionProductos(productosShop, productos));
-    
-    // alert(
-      //   "nombre: " +
-      //     seleccionProductos(productosShop, productos).nombre +
-      //     ", Precio: " +
-      //     seleccionProductos(productosShop, productos).precio
-      // );
-      
-      // let cantidadProductos = Number(
-        //   prompt(
-          //     "Ingrese cuantos productos necesitas. le seleccion debe ser maximo de 20 productos. "
-          //   )
-          // );
   

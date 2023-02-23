@@ -97,7 +97,7 @@ width: 18rem;
     width: 900px;
     height: 100px;
     background-color: aqua;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #80292933;
     transition: 0.3s;
     border-radius: 5px;
     overflow: hidden;
@@ -168,16 +168,6 @@ width: 18rem;
     position: absolute;
   }
 
-  .cardCarrito button#botonRestar {
-    width: 30px;
-    padding: 1px;
-    margin: 30px;
-    right: 184px;
-  }
-  .cardCarrito button#botonRestar:hover {
-    background-color: black;
-  }
-
   .cardCarrito span#botonMostrar {
     width: 30px;
     padding: 1px;
@@ -185,16 +175,7 @@ width: 18rem;
     right: 142px;
   }
 
-  .cardCarrito button#botonSumar {
-    width: 30px;
-    padding: 1px;
-    margin: 30px;
-    right: 100px;
-  }
 
-  .cardCarrito button#botonSumar:hover {
-    background-color: green;
-  }
   
   .cardCarrito button.botonEliminar{
     right: 10px;
@@ -203,5 +184,38 @@ width: 18rem;
     background-color: red;
   }
 
+
+  .totalCompra{
+    position: fixed;
+    padding: 30px;
+    top: 90px;
+    right: 50px;
+    margin: 10px;
+    background-color: violet;
+    color: black;
+    box-shadow: 2px 2px 2px 2px #341ef9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
   
+
+  .botonCompra{
+    position: fixed;
+    padding: 30px;
+    bottom: 50px;
+    right: 50px;
+    margin: 10px;
+    background-color: violet;
+    color: black;
+    box-shadow: 2px 2px 2px 2px #341ef9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .botonCompra:hover{
+    background-color: green;
+  }
 
